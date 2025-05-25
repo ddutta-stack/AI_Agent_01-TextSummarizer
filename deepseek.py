@@ -5,7 +5,7 @@ ollamaurl="http://localhost:11434/api/generate"
 # Define the function to query the DeepSeek model
 def deepseek_query01(prompt):
     payload={
-        "model":"deepseek-r1",
+        "model":"deepseek-r1:1.5b",
         "prompt":prompt, 
         "stream":False 
         #temperature=0.7,
