@@ -1,6 +1,6 @@
 import requests
 #Define the url for the DeepSeek API and ollama API -- 11434
-ollamaurl="https://localhost:11434/api/generate"
+ollamaurl="http://localhost:11434/api/generate"
 
 # Define the function to query the DeepSeek model
 def deepseek_query01(prompt):
@@ -30,7 +30,7 @@ Drug Discovery: AI has accelerated the process of drug discovery by predicting t
 3.
 Nuclear Fusion Research: AI has been instrumental in advancing nuclear fusion research by predicting and avoiding instabilities in tokamaks, which are devices used to contain superheated plasma for nuclear fusion
 1'''
-response = deepseek_query01(test_prompt)
+response1 = deepseek_query01(test_prompt)
 print("Response from DeepSeek model starts here:")
-print(response)  # Print the response from the DeepSeek model   
+print(response1)  # Print the response from the DeepSeek model   
 
