@@ -14,7 +14,8 @@ def summarize_text(prompt):
     
     payload = {
         "model": "deepseek-r1:1.5b",
-        "prompt": prompt,
+        # "prompt": f"summarize this text :\n\n {prompt}",
+        "prompt": f"summarize this text in a formal style but in a technical summary format  ** one sentence with bullet points** :\n\n {prompt}",
         "stream": False,
         "temperature": 0.6
     }
@@ -43,3 +44,5 @@ interface = gr.Interface(
     title="DeepSeek Text Summarizer",
     description="This application uses the DeepSeek model to summarize text input."
 )
+if __name__ == "__main__":
+    interface.launch(share=False)  # Launch the Gradio interface with sharing enabled
