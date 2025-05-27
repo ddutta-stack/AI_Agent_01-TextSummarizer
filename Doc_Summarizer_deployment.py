@@ -18,4 +18,4 @@ def summarize_document(text_document: str):
 ## to run this use this command in terminal -> 
 # python -m  uvicorn Doc_Summarizer_deployment:app --reload
 # This command will start the FastAPI server and you can access the API at http://localhost:8000/summarize OR the url provided in the terminal output.
-# You can test the API using tools like Postman or curl by sending a POST request to the endpoint with a JSON body containing the text_document field.
+# Please note that You can test this only using the API using tools like Postman or curl by sending a POST request to the endpoint with a JSON body containing the text_document field.
