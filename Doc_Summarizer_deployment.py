@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import requests
-from typing Union
+
 # FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.
 # It is easy to use and allows for automatic generation of OpenAPI documentation.
 #creating an object of FastAPI
@@ -15,4 +15,7 @@ def summarize_document(text_document: str):
         }
     response = requests.post(ollama_url, json=payload)
     return response.json().get("response", "No response found")
-## to run this use this command in terminal -> 1. pip install uvicorn 2. uvicorn app: Doc_Summarizer_deployment.py --reload
+## to run this use this command in terminal -> 
+# python -m  uvicorn Doc_Summarizer_deployment:app --reload
+# This command will start the FastAPI server and you can access the API at http://localhost:8000/summarize OR the url provided in the terminal output.
+# You can test the API using tools like Postman or curl by sending a POST request to the endpoint with a JSON body containing the text_document field.
