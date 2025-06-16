@@ -44,5 +44,6 @@ interface = gr.Interface(
     title="DeepSeek Text Summarizer",
     description="This application uses the DeepSeek model to summarize text input."
 )
+# Launch the Gradio interface for user interaction
 if __name__ == "__main__":
     interface.launch(share=False)  # Launch the Gradio interface with sharing enabled
